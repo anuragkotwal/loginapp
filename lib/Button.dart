@@ -6,6 +6,7 @@ class Button extends StatefulWidget {
   @override
   _ButtonState createState() => _ButtonState();
 }
+
 class _ButtonState extends State<Button> {
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,13 @@ class _ButtonState extends State<Button> {
         RaisedButton(
           onPressed: () async {
             if (If.emailController.text.toString() == "101cooder" &&
-                If.pwdController.text.toString() == "Cooder9826")
-              Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()));
-              //Navigator.pushNamed(context, '/second');
+                If.pwdController.text.toString() == "Cooder9826") {
+              If.emailController.clear();
+              If.pwdController.clear();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SecondScreen()));
+            }
+            //Navigator.pushNamed(context, '/second');
             else if (If.emailController.text.toString() == "" ||
                 If.pwdController.text.toString() == "")
               showAlertDialogForEmptyFields(context);
