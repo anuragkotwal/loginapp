@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:loginapp/InputField.dart' as If;
-import 'package:nanoid/nanoid.dart';
 import 'Details.dart';
 
 class Button extends StatefulWidget {
   @override
   _ButtonState createState() => _ButtonState();
 }
-
 class _ButtonState extends State<Button> {
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class _ButtonState extends State<Button> {
           onPressed: () async {
             if (If.emailController.text.toString() == "101cooder" &&
                 If.pwdController.text.toString() == "Cooder9826")
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Details()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()));
               //Navigator.pushNamed(context, '/second');
             else if (If.emailController.text.toString() == "" ||
                 If.pwdController.text.toString() == "")
