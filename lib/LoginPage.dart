@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
           Colors.purple[800],
           Colors.pink[900],
           Colors.pink,
-          Colors.deepPurple
+          Colors.purple[800]
         ])),
         child: Column(
           children: <Widget>[
@@ -27,8 +27,8 @@ class LoginPage extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    topRight: Radius.circular(60),
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40),
                   )),
               child: InputWrapper(),
             ))
@@ -38,4 +38,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
